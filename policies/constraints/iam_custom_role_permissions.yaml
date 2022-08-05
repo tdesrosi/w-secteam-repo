@@ -1,4 +1,4 @@
-# Copyright 2019 Google LLC
+# Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,21 +13,16 @@
 # limitations under the License.
 #
 apiVersion: constraints.gatekeeper.sh/v1alpha1
-kind: GCPStorageLocationConstraintV1
+kind: GCPIAMCustomRolePermissionsConstraintV1
 metadata:
-  name: allow_some_storage_location
+  name: allowlist-custom-role-permissions
   annotations:
-    description: Checks Cloud Storage bucket locations against allowed or disallowed
-      locations.
-    bundles.validator.forsetisecurity.org/healthcare-baseline-v1: security
+    description: Custom BigQuery role must only have specific permissions
 spec:
   severity: high
-  match:
-    ancestries: # {"$ref":"#/definitions/io.k8s.cli.setters.target"}
-    - "organizations/**"
   parameters:
-    mode: "allowlist"
-    locations:
-    - us-west1
-    - US
-    exemptions: []
+    mode: allowlist
+    title: "My Custom BigQuery Role"
+    permissions:
+    - "bigquery.datasets.get"
+    - "bigquery.tables.*"
