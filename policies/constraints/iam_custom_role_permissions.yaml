@@ -21,8 +21,7 @@ metadata:
 spec:
   severity: high
   parameters:
-    mode: allowlist
-    title: "My Custom BigQuery Role"
+    mode: denylist
+    title: "Deny High privileged permissions for custome roles"
     permissions:
-    - "bigquery.datasets.get"
-    - "bigquery.tables.*"
+    - "*.setIamPolicy"
