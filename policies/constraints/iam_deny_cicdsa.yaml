@@ -19,3 +19,5 @@ spec:
    # - "allUsers"
    # - "allAuthenticatedUsers"
    # Add Service accounts used by the CICD Pipeline
+    - cloubuild-dev-sa@w-app-pipeline.iam.gserviceaccount.com
+    - cloubuild-prod-sa@w-app-pipeline.iam.gserviceaccount.com
