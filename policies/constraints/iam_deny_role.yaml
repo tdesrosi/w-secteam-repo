@@ -3,7 +3,7 @@ kind: GCPIAMAllowedBindingsConstraintV3
 metadata:
   name: deny_role
   annotations:
-    description: Ban any users from being granted Service Account User access
+    description: Ban any principal from being granted Service Account User, editor or project IAM admin roles
     # This constraint is not certified by CIS.
     bundles.validator.forsetisecurity.org/cis-v1.1: 1.05
 spec:
@@ -17,6 +17,7 @@ spec:
     assetType: cloudresourcemanager.googleapis.com/Project
     role: 
       roles/iam.serviceAccountUser
+      roles/resourcemanager.projectIamAdmin
       roles/editor
     members:
     - "*"

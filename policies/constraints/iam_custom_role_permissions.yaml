@@ -15,13 +15,13 @@
 apiVersion: constraints.gatekeeper.sh/v1alpha1
 kind: GCPIAMCustomRolePermissionsConstraintV1
 metadata:
-  name: allowlist-custom-role-permissions
+  name: denylist-custom-role-permissions
   annotations:
-    description: Custom BigQuery role must only have specific permissions
+    description: Custom roles cannot have any setIamPolicy permissions
 spec:
   severity: high
   parameters:
     mode: denylist
-    title: "Deny High privileged permissions for custome roles"
+    title: "Deny High privileged permissions for custom roles"
     permissions:
     - "*.setIamPolicy"
