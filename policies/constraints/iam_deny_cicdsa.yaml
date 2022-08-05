@@ -21,3 +21,4 @@ spec:
    # Add Service accounts used by the CICD Pipeline
     - cloubuild-dev-sa@w-app-pipeline.iam.gserviceaccount.com
     - cloubuild-prod-sa@w-app-pipeline.iam.gserviceaccount.com
+    - w-targetdev-0805@w-appdev-0805.iam.gserviceaccount.com
