@@ -24,4 +24,4 @@ spec:
     mode: denylist
     title: "Deny High privileged permissions for custom roles"
     permissions:
-    - "**.setIamPolicy"
+      - "**.setIamPolicy"
