@@ -29,7 +29,7 @@ spec:
     roles:
       - "roles/appengine.appViewer"
       - "roles/logging.viewer"
-      - "projects/tfdeploy-221013/roles/custom_role_proj_00"
-      - "organizations/716543262869/roles/custom_role_org00"
+      - "organizations/716543262869/roles/custom_role_org_s"
+      - "projects/tfdeploy-221013/roles/custom_role_proj_s"
       # allow all roles, use with caution
       # - "roles/*"
