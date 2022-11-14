@@ -22,7 +22,7 @@ spec:
   severity: high
   match:
     target: # {"$ref":"#/definitions/io.k8s.cli.setters.target"}
-    - "organizations/**"
+      - "organizations/**"
     exclude: [] # optional, default is no exclusions
   parameters:
     mode: "allow"
@@ -32,4 +32,4 @@ spec:
       - "organizations/716543262869/roles/custom_role_org_s"
       - "projects/tfdeploy-221013/roles/custom_role_proj_s"
       # allow all roles, use with caution
-      # - "roles/*"
+      - "roles/*"
