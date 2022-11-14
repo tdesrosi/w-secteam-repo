@@ -28,7 +28,9 @@ deny[{
 
 	asset.asset_type == "iam.googleapis.com/Role"
 
-	asset_permissions := asset.resource.data.includedPermissions[_]
+	asset_permissions := {x | x := asset.resource.data.includedPermissions[_]}
+	params_permissions := {x | x := params.permissions[_]}
+
 	asset_title := asset.resource.data.title
 
 	params_title := lib.get_default(params, "title", "*")
@@ -37,11 +39,9 @@ deny[{
 
 	mode := lib.get_default(params, "mode", "allowlist")
 
-	matches_found = [m | m = config_pattern(params.permissions[_]); glob.match(m, [], asset_permissions)]
-	target_match_count(mode, desired_count)
-	count(matches_found) != desired_count
+	get_violations(mode, asset_permissions, params_permissions, matches_found)
 
-	message := sprintf("Role %v grants permission %v", [asset.name, asset_permissions])
+	message := sprintf("Role %v grants permission %v", [asset.name, matches_found])
 
 	metadata := {
 		"resource": asset.name,
@@ -53,6 +53,20 @@ deny[{
 ###########################
 # Rule Utilities
 ###########################
+
+# Get violations found, depending on the mode of the constraint
+get_violations(mode, asset_permissions, params_permissions) = output {
+	# Grab intersect from constraint permissions and tfplan permissions if denylist
+	mode == "denylist"
+	output = asset_permissions & params_permissions
+}
+
+get_violations(mode, asset_permissions, params_permissions) = output {
+	# Grab permission(s) that fall outside of allowed permissions list
+	# ie. the permissions in tfplan that are not in allowlist
+	mode == "allowlist"
+	output = asset_permissions - params_permissions
+}
 
 # Determine the overlap between matches under test and constraint
 target_match_count(mode) = 0 {
