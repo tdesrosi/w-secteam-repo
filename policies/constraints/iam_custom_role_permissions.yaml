@@ -17,7 +17,7 @@ kind: GCPIAMCustomRolePermissionsConstraintV1
 metadata:
   name: allowlist-custom-role-permissions
   annotations:
-    description: Custom BigQuery role must only have specific permissions
+    description: Custom roles must only have specific permissions
 spec:
   severity: high
   parameters:
