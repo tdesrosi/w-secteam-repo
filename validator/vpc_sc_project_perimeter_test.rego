@@ -23,7 +23,7 @@ allowlist_violations[violation] {
 	constraint := data.test.fixtures.vpc_sc_project_perimeter.constraints.allowlist
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -33,7 +33,7 @@ denylist_violations[violation] {
 	constraint := data.test.fixtures.vpc_sc_project_perimeter.constraints.denylist
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

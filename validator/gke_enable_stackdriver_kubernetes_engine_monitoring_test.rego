@@ -23,7 +23,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.gke_enable_stackdriver_kubernetes_engine_monitoring.constraints
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

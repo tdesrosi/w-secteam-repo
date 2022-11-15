@@ -23,7 +23,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.gke_disable_default_service_account.constraints.disable_gke_default_service_account
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

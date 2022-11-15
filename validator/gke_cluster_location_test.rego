@@ -34,7 +34,7 @@ find_all_violations[violation] {
 	resources := data.resources[_]
 	constraint := data.test_constraints[_]
 	issues := deny with input.asset as resources
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -61,7 +61,7 @@ test_gke_cluster_location_no_assets {
 violations_with_empty_denylist[violation] {
 	constraints := [denylist_none]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -76,7 +76,7 @@ test_gke_cluster_location_denylist_none {
 violations_with_empty_allowlist[violation] {
 	constraints := [allowlist_none]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -105,7 +105,7 @@ test_gke_cluster_location_allowlist_none {
 violations_with_single_denylist[violation] {
 	constraints := [denylist_one]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -130,7 +130,7 @@ test_gke_cluster_location_denylist_one {
 violations_with_single_allowlist[violation] {
 	constraints := [allowlist_one]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -158,7 +158,7 @@ test_gke_cluster_location_allowlist_one {
 violations_with_single_denylist_exemption[violation] {
 	constraints := [denylist_one_exemption]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -183,7 +183,7 @@ test_gke_cluster_location_denylist_one_exemption {
 violations_with_single_allowlist_exemption[violation] {
 	constraints := [allowlist_one_exemption]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -208,7 +208,7 @@ test_gke_cluster_location_allowlist_one_exemption {
 violations_with_full_denylist[violation] {
 	constraints := [denylist_all]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -237,7 +237,7 @@ test_gke_cluster_location_denylist_all {
 violations_with_full_allowlist[violation] {
 	constraints := [allowlist_all]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }

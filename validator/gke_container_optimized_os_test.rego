@@ -23,7 +23,7 @@ cos_violations[violation] {
 	constraint := data.test.fixtures.gke_container_optimized_os.constraints.gke_container_optimized_os
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -33,7 +33,7 @@ cos_or_containerd_violations[violation] {
 	constraint := data.test.fixtures.gke_container_optimized_os.constraints.gke_container_optimized_os_containerd
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

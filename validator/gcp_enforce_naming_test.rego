@@ -27,7 +27,7 @@ find_violations[violation] {
 	constraint := data.test_constraints
 
 	issues := deny with input.asset as asset
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	total_issues := count(issues)
 
@@ -36,14 +36,14 @@ find_violations[violation] {
 
 test_name_convention_all_match {
 	violations := find_violations with data.assets as fixture_assets
-		 with data.test_constraints as fixture_constraints.all_match
+		with data.test_constraints as fixture_constraints.all_match
 
 	count(violations) == 0
 }
 
 test_name_convention_no_match {
 	violations := find_violations with data.assets as fixture_assets
-		 with data.test_constraints as fixture_constraints.partial_match
+		with data.test_constraints as fixture_constraints.partial_match
 
 	count(violations) > 0
 }

@@ -44,7 +44,7 @@ test_target_location_match_count_denylist {
 violations_with_empty_parameters[violation] {
 	constraints := [fixture_constraints.location_default]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -59,7 +59,7 @@ test_storage_bucket_default {
 violations_with_empty_denylist[violation] {
 	constraints := [fixture_constraints.denylist_none]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -74,7 +74,7 @@ test_storage_bucket_denylist_none {
 violations_with_empty_allowlist[violation] {
 	constraints := [fixture_constraints.allowlist_none]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -88,7 +88,7 @@ test_storage_bucket_allowlist_none {
 violations_with_single_denylist[violation] {
 	constraints := [fixture_constraints.denylist_one]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -107,7 +107,7 @@ test_storage_bucket_denylist_one {
 violations_with_single_denylist_exemption[violation] {
 	constraints := [fixture_constraints.denylist_one_exemption]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -121,7 +121,7 @@ test_storage_bucket_denylist_one_exemption {
 violations_with_single_allowlist[violation] {
 	constraints := [fixture_constraints.allowlist_one]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -135,7 +135,7 @@ test_storage_bucket_allowlist_one {
 violations_with_single_allowlist_exemption[violation] {
 	constraints := [fixture_constraints.allowlist_one_exemption]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -150,7 +150,7 @@ test_storage_bucket_allowlist_one_exemption {
 violations_with_full_denylist[violation] {
 	constraints := [fixture_constraints.denylist_all]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -165,7 +165,7 @@ test_storage_bucket_denylist_all {
 violations_with_full_allowlist[violation] {
 	constraints := [fixture_constraints.allowlist_all]
 	found_violations := find_violations with data.assets as fixture_buckets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }

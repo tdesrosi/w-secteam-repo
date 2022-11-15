@@ -22,7 +22,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.gcp_lb_forwarding_rules.constraints
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

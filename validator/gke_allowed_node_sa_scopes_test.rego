@@ -23,7 +23,7 @@ default_scopes_violations[violation] {
 	constraint := data.test.fixtures.gke_allowed_node_sa_scopes.constraints.allowed_gke_node_sa_scope_default
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -33,7 +33,7 @@ customized_scopes_violations[violation] {
 	constraint := data.test.fixtures.gke_allowed_node_sa_scopes.constraints.allowed_gke_node_sa_scope_customized
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

@@ -23,8 +23,8 @@ all_violations[violation] {
 	constraint := data.test.fixtures.network_restrict_default.constraints
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
-		 with data.inventory as data.test.fixtures.network_restrict_default.assets
+		with input.constraint as constraint
+		with data.inventory as data.test.fixtures.network_restrict_default.assets
 
 	violation := issues[_]
 }

@@ -37,7 +37,7 @@ find_all_violations[violation] {
 	resources := data.resources[_]
 	constraint := data.test_constraints[_]
 	issues := deny with input.asset as resources
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -53,7 +53,7 @@ test_storage_bucket_retention_no_assets {
 violations_with_maximum_retention_multiple_delete_actions[violation] {
 	constraints := [max_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_multiple_delete_action
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -78,7 +78,7 @@ test_storage_bucket_retention_max_retention_multiple_delete_actions {
 violations_with_maximum_retention_no_action[violation] {
 	constraints := [max_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_no_action
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -106,7 +106,7 @@ test_storage_bucket_retention_max_retention_no_action {
 violations_with_maximum_retention_non_delete_action[violation] {
 	constraints := [max_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_non_delete_action
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -134,7 +134,7 @@ test_storage_bucket_retention_max_retention_non_delete_action {
 violations_with_maximum_retention_age[violation] {
 	constraints := [max_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_multiple_delete_action
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -159,7 +159,7 @@ test_storage_bucket_retention_max_retention_age {
 violations_with_maximum_retention_no_age[violation] {
 	constraints := [max_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_no_age
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -187,7 +187,7 @@ test_storage_bucket_retention_max_retention_age {
 violations_with_maximum_retention_all[violation] {
 	constraints := [max_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_all
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -221,7 +221,7 @@ test_storage_bucket_retention_max_retention_all {
 violations_with_minimum_retention_age[violation] {
 	constraints := [min_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_multiple_delete_action
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -249,7 +249,7 @@ test_storage_bucket_retention_min_retention_age {
 violations_with_minimum_retention_versions[violation] {
 	constraints := [min_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_versions
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -274,7 +274,7 @@ test_storage_bucket_retention_min_retention_versions {
 violations_with_minimum_retention_all[violation] {
 	constraints := [min_retention_only]
 	violations := find_all_violations with data.resources as fixture_assets_all
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -304,7 +304,7 @@ test_storage_bucket_retention_min_retention_all {
 violations_with_minimum_maximum_retention_all[violation] {
 	constraints := [min_max_retention]
 	violations := find_all_violations with data.resources as fixture_assets_all
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -338,7 +338,7 @@ test_storage_bucket_retention_min_max_retention_all {
 violations_with_maximum_retention_all_one_exemption[violation] {
 	constraints := [max_retention_only_one_exemption]
 	violations := find_all_violations with data.resources as fixture_assets_all
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -371,7 +371,7 @@ test_storage_bucket_retention_max_retention_all_one_exemption {
 violations_with_minimum_retention_all_one_exemption[violation] {
 	constraints := [min_retention_only_one_exemption]
 	violations := find_all_violations with data.resources as fixture_assets_all
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -400,7 +400,7 @@ test_storage_bucket_retention_min_retention_all_one_exemption {
 violations_with_minimum_maximum_retention_all_one_exemption[violation] {
 	constraints := [min_max_retention_one_exemption]
 	violations := find_all_violations with data.resources as fixture_assets_all
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }

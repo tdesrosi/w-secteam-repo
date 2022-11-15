@@ -25,7 +25,7 @@ find_violations[violation] {
 	constraint := data.test_constraints[_]
 
 	issues := deny with input.asset as instance
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	total_issues := count(issues)
 
@@ -43,7 +43,7 @@ violations_one_project[violation] {
 	constraints := [fixture_constraints.iam_allowed_policy_member_two_domains]
 
 	found_violations := find_violations with data.instances as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -63,7 +63,7 @@ violations_none[violation] {
 	constraints := [fixture_constraints.iam_allowed_policy_member_all_domains]
 
 	found_violations := find_violations with data.instances as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -78,7 +78,7 @@ violations_project_reference[violation] {
 	constraints := [fixture_constraints.iam_allowed_policy_member_reject_project_reference]
 
 	found_violations := find_violations with data.instances as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -93,7 +93,7 @@ violations_reject_sub_domains[violation] {
 	constraints := [fixture_constraints.iam_allowed_policy_member_reject_sub_domains]
 
 	found_violations := find_violations with data.instances as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }

@@ -29,7 +29,6 @@ spec:
     roles:
       - "roles/appengine.appViewer"
       - "roles/logging.viewer"
-      - "organizations/716543262869/roles/custom_role_org_s"
-      - "projects/tfdeploy-221013/roles/custom_role_proj_s"
       # allow all roles, use with caution
       - "roles/*"
+      - "w-secteam-target-prod/roles/myCustomRole"

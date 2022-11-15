@@ -5,7 +5,7 @@ resources_in_violation[resource] {
 	asset := data.test.fixtures.iam_audit_log.assets[_]
 	constraint := data.test.fixtures.iam_audit_log.constraints
 	issues := deny with input.asset as asset
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	resource := issues[_].details.resource
 }

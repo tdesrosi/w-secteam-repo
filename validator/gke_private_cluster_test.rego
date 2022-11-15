@@ -23,7 +23,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.gke_private_cluster.constraints.allow_only_private_cluster
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

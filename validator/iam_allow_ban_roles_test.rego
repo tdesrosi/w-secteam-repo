@@ -25,7 +25,7 @@ find_violations[violation] {
 	constraint := data.test_constraints[_]
 
 	issues := deny with input.asset as asset
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	total_issues := count(issues)
 

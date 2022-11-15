@@ -23,8 +23,8 @@ all_violations[violation] {
 	constraint := data.test.fixtures.network_enable_private_google_access.constraints
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
-		 with data.inventory as data.test.fixtures.network_enable_private_google_access.assets
+		with input.constraint as constraint
+		with data.inventory as data.test.fixtures.network_enable_private_google_access.assets
 
 	violation := issues[_]
 }

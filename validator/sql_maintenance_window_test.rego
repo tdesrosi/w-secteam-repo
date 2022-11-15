@@ -30,7 +30,7 @@ find_violations[violation] {
 no_parameter[violation] {
 	constraints := [fixture_constraints.no_parameter]
 	found_violations := find_violations with data.test_assets as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -49,7 +49,7 @@ test_no_parameter_list {
 no_hour[violation] {
 	constraints := [fixture_constraints.no_hour]
 	found_violations := find_violations with data.test_assets as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -67,7 +67,7 @@ test_no_hour_list {
 specific_hours[violation] {
 	constraints := [fixture_constraints.specific_hours]
 	found_violations := find_violations with data.test_assets as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -86,7 +86,7 @@ test_specific_hours_list {
 exemption[violation] {
 	constraints := [fixture_constraints.exemption]
 	found_violations := find_violations with data.test_assets as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }

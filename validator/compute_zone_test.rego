@@ -55,7 +55,7 @@ test_compute_zone_no_constraints {
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	trace(sprintf("combined_assets count: %v", [count(combined_assets)]))
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.constraints as []
+		with data.constraints as []
 
 	count(found_violations) == 0
 }
@@ -65,7 +65,7 @@ violations_with_empty_parameters[violation] {
 	constraints := [fixture_constraints.zone_default]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -81,7 +81,7 @@ violations_with_empty_denylist[violation] {
 	constraints := [fixture_constraints.denylist_none]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -97,7 +97,7 @@ violations_with_empty_allowlist[violation] {
 	constraints := [fixture_constraints.allowlist_none]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -113,7 +113,7 @@ violations_with_single_denylist[violation] {
 	constraints := [fixture_constraints.denylist_one]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -133,7 +133,7 @@ violations_with_single_denylist_exemption[violation] {
 	constraints := [fixture_constraints.denylist_one_exemption]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -148,7 +148,7 @@ violations_with_single_allowlist[violation] {
 	constraints := [fixture_constraints.allowlist_one]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -164,7 +164,7 @@ violations_with_single_allowlist_exemption[violation] {
 	constraints := [fixture_constraints.allowlist_one_exemption]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -180,7 +180,7 @@ violations_with_full_denylist[violation] {
 	constraints := [fixture_constraints.denylist_all]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -196,7 +196,7 @@ violations_with_full_allowlist[violation] {
 	constraints := [fixture_constraints.allowlist_all]
 	combined_assets := array.concat(fixture_instances, fixture_disks)
 	found_violations := find_violations with data.assets as combined_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }

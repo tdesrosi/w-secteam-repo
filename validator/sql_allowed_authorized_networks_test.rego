@@ -23,7 +23,7 @@ find_violations[violation] {
 	resource := data.test.fixtures.sql_allowed_authorized_networks.assets[_]
 	constraint := data.test_constraints[_]
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

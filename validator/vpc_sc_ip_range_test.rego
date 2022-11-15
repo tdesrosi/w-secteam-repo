@@ -23,7 +23,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.vpc_sc_ip_range.constraints
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

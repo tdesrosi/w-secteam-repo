@@ -21,7 +21,7 @@ ksk_violations[violation] {
 	constraint := data.test.fixtures.dnssec_prevent_rsasha1.constraints.dnssec_prevent_rsasha1_ksk
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -31,7 +31,7 @@ zsk_violations[violation] {
 	constraint := data.test.fixtures.dnssec_prevent_rsasha1.constraints.dnssec_prevent_rsasha1_zsk
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -41,7 +41,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.dnssec_prevent_rsasha1.constraints.dnssec_prevent_rsasha1_all
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

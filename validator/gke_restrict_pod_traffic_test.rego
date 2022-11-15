@@ -23,7 +23,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.gke_restrict_pod_traffic.constraints.restrict_gke_pod_traffic
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -35,7 +35,7 @@ good_config_no_violations[violation] {
 	resource.name = "//container.googleapis.com/projects/transfer-repos/zones/us-central1-c/clusters/joe-clust4"
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

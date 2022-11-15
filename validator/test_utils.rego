@@ -19,7 +19,7 @@ package validator.test_utils
 get_test_violations(test_assets, test_constraints, test_template) = violations {
 	violations := [violation |
 		violations := data.templates.gcp[test_template].deny with input.asset as test_assets[_]
-			 with input.constraint as test_constraints[_]
+			with input.constraint as test_constraints[_]
 
 		violation := violations[_]
 	]

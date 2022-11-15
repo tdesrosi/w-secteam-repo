@@ -29,7 +29,7 @@ find_all_violations[violation] {
 	resources := data.resources[_]
 	constraint := data.test_constraints[_]
 	issues := deny with input.asset as resources
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -37,7 +37,7 @@ find_all_violations[violation] {
 instance_violations[violation] {
 	constraints := [fixture_constraint]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }

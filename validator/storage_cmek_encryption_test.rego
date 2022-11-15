@@ -21,7 +21,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.storage_cmek_encryption.constraints.require_storage_cmek_encryption
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

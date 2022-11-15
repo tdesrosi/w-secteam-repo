@@ -29,7 +29,7 @@ find_violations[violation] {
 no_parameter[violation] {
 	constraints := [fixture_constraints.no_parameter]
 	found_violations := find_violations with data.test_assets as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -49,7 +49,7 @@ test_no_parameter_list {
 exemption[violation] {
 	constraints := [fixture_constraints.exemption]
 	found_violations := find_violations with data.test_assets as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }

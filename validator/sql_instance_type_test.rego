@@ -33,7 +33,7 @@ find_all_violations[violation] {
 	resources := data.resources[_]
 	constraint := data.test_constraints[_]
 	issues := deny with input.asset as resources
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -41,7 +41,7 @@ find_all_violations[violation] {
 postgres_violations[violation] {
 	constraints := [sql_type_deny_postgres]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -49,7 +49,7 @@ postgres_violations[violation] {
 sql_violations[violation] {
 	constraints := [sql_type_deny_mysql_and_sql]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -57,7 +57,7 @@ sql_violations[violation] {
 mysql_violations[violation] {
 	constraints := [sql_type_allow_mysql_only]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -65,7 +65,7 @@ mysql_violations[violation] {
 allow_all_violations[violation] {
 	constraints := [sql_type_allow_all_types]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }
@@ -73,7 +73,7 @@ allow_all_violations[violation] {
 deny_all_violations[violation] {
 	constraints := [sql_type_deny_all]
 	violations := find_all_violations with data.resources as fixture_assets
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := violations[_]
 }

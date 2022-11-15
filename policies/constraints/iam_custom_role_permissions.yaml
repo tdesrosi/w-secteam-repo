@@ -22,7 +22,6 @@ spec:
   severity: high
   parameters:
     mode: allowlist
-    title: "My Custom BigQuery Role"
     permissions:
       - "bigquery.datasets.get"
       - "bigquery.tables.*"

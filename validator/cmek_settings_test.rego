@@ -21,7 +21,7 @@ all_violations[violation] {
 	constraint := data.test.fixtures.cmek_settings.constraints.one_year
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }
@@ -31,7 +31,7 @@ all_violations_no_params[violation] {
 	constraint := data.test.fixtures.cmek_settings.constraints.no_params
 
 	issues := deny with input.asset as resource
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	violation := issues[_]
 }

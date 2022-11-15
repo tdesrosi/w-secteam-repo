@@ -25,7 +25,7 @@ find_violations[violation] {
 	constraint := data.test_constraints[_]
 
 	issues := deny with input.asset as instance
-		 with input.constraint as constraint
+		with input.constraint as constraint
 
 	total_issues := count(issues)
 
@@ -53,7 +53,7 @@ test_external_ip_no_instances {
 # Confirm no violations with no constraints
 test_external_ip_no_constraints {
 	found_violations := find_violations with data.instances as fixture_instances
-		 with data.constraints as []
+		with data.constraints as []
 
 	count(found_violations) = 0
 }
@@ -62,7 +62,7 @@ violations_with_empty_parameters[violation] {
 	constraints := [fixture_constraints.glb_forbid_external_ip_default]
 
 	found_violations := find_violations with data.instances as fixture_instances
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -78,7 +78,7 @@ allowlist_violations[violation] {
 	constraints := [fixture_constraints.glb_forbid_external_ip_allowlist]
 
 	found_violations := find_violations with data.instances as fixture_instances
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
@@ -87,7 +87,7 @@ denylist_violations[violation] {
 	constraints := [fixture_constraints.glb_forbid_external_ip_denylist]
 
 	found_violations := find_violations with data.instances as fixture_instances
-		 with data.test_constraints as constraints
+		with data.test_constraints as constraints
 
 	violation := found_violations[_]
 }
